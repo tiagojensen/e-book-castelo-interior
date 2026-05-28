@@ -2,12 +2,15 @@
 <html lang="pt-BR">
 
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Primeiras Moradas — Castelo Interior</title>
+  <title>O Castelo Interior</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -21,10 +24,10 @@
     }
 
     :root{
-      --bg:#0f1115;
-      --card:#171a21;
+      --bg:#090b10;
+      --card:#141820;
       --text:#f5f5f5;
-      --muted:#b8b8b8;
+      --muted:#9da3af;
       --accent:#d4b06a;
       --line:rgba(255,255,255,0.08);
       --max-width:760px;
@@ -40,7 +43,7 @@
     }
 
     .hero{
-      min-height:80vh;
+      min-height:100vh;
       display:flex;
       flex-direction:column;
       justify-content:center;
@@ -49,71 +52,93 @@
       padding:80px 24px;
     }
 
-    .hero small{
+    .book-label{
       color:var(--accent);
-      letter-spacing:3px;
+      letter-spacing:6px;
       text-transform:uppercase;
-      margin-bottom:18px;
-      font-size:0.85rem;
+      font-size:0.78rem;
+      margin-bottom:26px;
     }
 
     .hero h1{
       font-family:'Cormorant Garamond',serif;
-      font-size:clamp(3rem,10vw,5.5rem);
+      font-size:clamp(4rem,14vw,7rem);
+      line-height:0.92;
       font-weight:600;
-      line-height:1;
-      margin-bottom:24px;
+      margin-bottom:34px;
+    }
+
+    .divider{
+      width:90px;
+      height:1px;
+      background:var(--accent);
+      margin-bottom:34px;
     }
 
     .hero p{
       max-width:620px;
       color:var(--muted);
-      font-size:1.1rem;
-    }
-
-    .divider{
-      width:80px;
-      height:1px;
-      background:var(--accent);
-      margin:36px auto;
+      font-size:1.12rem;
+      line-height:1.9;
     }
 
     .container{
       width:100%;
       max-width:var(--max-width);
       margin:auto;
-      padding:0 24px 120px;
+      padding:0 24px 140px;
     }
 
-    .section{
-      margin-bottom:110px;
+    .morada{
+      margin-bottom:140px;
     }
 
-    .section-number{
+    .morada-name{
+      color:var(--accent);
+      letter-spacing:5px;
+      text-transform:uppercase;
+      font-size:0.78rem;
+      margin-bottom:18px;
+    }
+
+    .morada h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(3rem,10vw,5rem);
+      line-height:0.95;
+      font-weight:600;
+      margin-bottom:70px;
+    }
+
+    .chapter{
+      margin-bottom:120px;
+    }
+
+    .chapter-label{
       color:var(--accent);
       text-transform:uppercase;
-      letter-spacing:2px;
-      font-size:0.8rem;
-      margin-bottom:16px;
+      letter-spacing:3px;
+      font-size:0.78rem;
+      margin-bottom:18px;
     }
 
-    .section h2{
+    .chapter h3{
       font-family:'Cormorant Garamond',serif;
-      font-size:clamp(2rem,7vw,3.2rem);
-      line-height:1.1;
-      margin-bottom:32px;
+      font-size:clamp(2.3rem,7vw,3.8rem);
+      line-height:1.02;
       font-weight:600;
+      margin-bottom:38px;
+      max-width:560px;
     }
 
     p{
       font-size:1.14rem;
       color:#ededed;
-      margin-bottom:28px;
+      margin-bottom:30px;
     }
 
     ul{
-      padding-left:22px;
-      margin-bottom:32px;
+      padding-left:24px;
+      margin-bottom:34px;
     }
 
     li{
@@ -125,7 +150,7 @@
     .quote{
       border-left:2px solid var(--accent);
       padding-left:24px;
-      margin:50px 0;
+      margin:55px 0;
       font-style:italic;
       color:#dddddd;
       font-size:1.1rem;
@@ -135,24 +160,24 @@
       font-family:'Cormorant Garamond',serif;
       color:var(--accent);
       text-align:center;
-      font-size:clamp(1.9rem,6vw,2.8rem);
-      line-height:1.5;
-      margin:80px 0;
+      font-size:clamp(2rem,6vw,3rem);
+      line-height:1.45;
+      margin:110px 0;
       padding:0 12px;
     }
 
     .phrases{
       background:var(--card);
       border:1px solid var(--line);
-      border-radius:28px;
-      padding:36px 28px;
-      margin-top:40px;
+      border-radius:32px;
+      padding:42px 34px;
+      margin-top:50px;
     }
 
-    .phrases h3{
+    .phrases h4{
       font-family:'Cormorant Garamond',serif;
-      font-size:2rem;
-      margin-bottom:24px;
+      font-size:2.2rem;
+      margin-bottom:30px;
       font-weight:600;
     }
 
@@ -163,12 +188,12 @@
 
     .footer{
       border-top:1px solid var(--line);
-      padding:70px 24px;
+      padding:80px 24px;
       text-align:center;
       color:var(--muted);
     }
 
-    .footer h3{
+    .footer h4{
       font-family:'Cormorant Garamond',serif;
       font-size:2rem;
       margin-bottom:18px;
@@ -178,7 +203,23 @@
     @media(max-width:768px){
 
       .container{
-        padding:0 22px 100px;
+        padding:0 22px 110px;
+      }
+
+      .hero{
+        min-height:90vh;
+      }
+
+      .hero h1{
+        line-height:0.96;
+      }
+
+      .morada{
+        margin-bottom:110px;
+      }
+
+      .chapter{
+        margin-bottom:90px;
       }
 
       p{
@@ -189,373 +230,454 @@
         font-size:1.02rem;
       }
 
-      .section{
-        margin-bottom:90px;
-      }
-
     }
 
   </style>
+
 </head>
 
 <body>
 
   <section class="hero">
 
-    <small>Castelo Interior</small>
+    <div class="book-label">
+      Santa Teresa de Ávila
+    </div>
 
-    <h1>Primeiras Moradas</h1>
+    <h1>
+      O Castelo<br>
+      Interior
+    </h1>
 
     <div class="divider"></div>
 
     <p>
-      A alma humana como um castelo interior cheio de moradas,
-      no centro do qual habita Deus.
+      Uma jornada espiritual pelas moradas da alma,
+      rumo à união interior com Deus.
     </p>
 
   </section>
 
   <main class="container">
 
-    <section class="section">
+    <section class="morada">
 
-      <div class="section-number">Capítulo 1</div>
-
-      <h2>Resumo das Primeiras Moradas - Capítulo 1 - de Santa Teresa de Ávila</h2>
-
-      <p>
-        Neste capítulo, Santa Teresa apresenta a imagem central de todo o livro:
-        a alma humana como um castelo interior cheio de moradas,
-        no centro do qual habita Deus.
-        Ela explica a dignidade da alma,
-        a importância da oração
-        e o perigo de viver sem entrar dentro de si mesma.
-      </p>
-
-    </section>
-
-    <section class="section">
-
-      <div class="section-number">1</div>
-
-      <h2>A alma é um castelo precioso habitado por Deus</h2>
-
-      <p>
-        A alma é comparada a:
-      </p>
-
-      <ul>
-        <li>um castelo de cristal ou diamante;</li>
-        <li>cheio de aposentos;</li>
-        <li>com uma morada central onde Deus habita.</li>
-      </ul>
-
-      <div class="quote">
-        “Consideremos nossa alma como um castelo,
-        feito de um só diamante ou de um cristal claríssimo.”
+      <div class="morada-name">
+        Primeiras Moradas
       </div>
 
-      <p>
-        A imagem mostra:
-      </p>
+      <h2>
+        O despertar da alma
+      </h2>
 
-      <ul>
-        <li>a beleza da alma;</li>
-        <li>sua profundidade;</li>
-        <li>sua dignidade divina.</li>
-      </ul>
+      <section class="chapter">
 
-    </section>
+        <div class="chapter-label">
+          Capítulo 1
+        </div>
 
-    <section class="section">
+        <h3>
+          O Castelo Interior da Alma
+        </h3>
 
-      <div class="section-number">2</div>
+        <p>
+          Neste capítulo, Santa Teresa apresenta a imagem central de todo o livro:
+          a alma humana como um castelo interior cheio de moradas,
+          no centro do qual habita Deus.
+          Ela explica a dignidade da alma,
+          a importância da oração
+          e o perigo de viver sem entrar dentro de si mesma.
+        </p>
 
-      <h2>A alma foi criada à imagem de Deus</h2>
+      </section>
 
-      <p>
-        Santa Teresa insiste que:
-      </p>
+      <section class="chapter">
 
-      <ul>
-        <li>
-          a alma possui valor imenso porque foi criada à imagem
-          e semelhança de Deus;
-        </li>
+        <div class="chapter-label">
+          Parte 1
+        </div>
 
-        <li>
-          nossa inteligência não consegue compreender plenamente
-          sua grandeza.
-        </li>
-      </ul>
+        <h3>
+          A alma é um castelo precioso habitado por Deus
+        </h3>
 
-      <div class="quote">
-        “Nada se compara à beleza da alma e ao seu imenso potencial.”
+        <p>
+          A alma é comparada a:
+        </p>
+
+        <ul>
+          <li>um castelo de cristal ou diamante;</li>
+          <li>cheio de aposentos;</li>
+          <li>com uma morada central onde Deus habita.</li>
+        </ul>
+
+        <p>
+          Frase central:
+        </p>
+
+        <div class="quote">
+          “Consideremos nossa alma como um castelo,
+          feito de um só diamante ou de um cristal claríssimo.”
+        </div>
+
+        <p>
+          A imagem mostra:
+        </p>
+
+        <ul>
+          <li>a beleza da alma;</li>
+          <li>sua profundidade;</li>
+          <li>sua dignidade divina.</li>
+        </ul>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 2
+        </div>
+
+        <h3>
+          A alma foi criada à imagem de Deus
+        </h3>
+
+        <p>
+          Santa Teresa insiste que:
+        </p>
+
+        <ul>
+
+          <li>
+            a alma possui valor imenso porque foi criada
+            à imagem e semelhança de Deus;
+          </li>
+
+          <li>
+            nossa inteligência não consegue compreender
+            plenamente sua grandeza.
+          </li>
+
+        </ul>
+
+        <p>
+          Frase importante:
+        </p>
+
+        <div class="quote">
+          “Nada se compara à beleza da alma e ao seu imenso potencial.”
+        </div>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 3
+        </div>
+
+        <h3>
+          O maior problema humano é não se conhecer
+        </h3>
+
+        <p>
+          Ela lamenta que:
+        </p>
+
+        <ul>
+          <li>as pessoas cuidem apenas do corpo;</li>
+          <li>quase nunca pensem na alma;</li>
+          <li>ignorem quem habita dentro delas.</li>
+        </ul>
+
+        <p>
+          Imagem marcante:
+        </p>
+
+        <p>
+          Admiramos “a muralha do castelo” (o corpo),
+          mas não entramos nos seus aposentos interiores.
+        </p>
+
+        <p>
+          Para Santa Teresa,
+          isso é uma profunda ignorância espiritual.
+        </p>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 4
+        </div>
+
+        <h3>
+          No centro da alma acontecem
+          as coisas secretas entre Deus e a pessoa
+        </h3>
+
+        <p>
+          A morada principal:
+        </p>
+
+        <ul>
+          <li>é o lugar da intimidade com Deus;</li>
+          <li>o espaço das maiores graças espirituais;</li>
+          <li>o coração da vida interior.</li>
+        </ul>
+
+        <p>
+          Ela explica que Deus concede diferentes graças às almas:
+        </p>
+
+        <ul>
+          <li>não apenas por mérito;</li>
+          <li>mas para manifestar Sua grandeza e misericórdia.</li>
+        </ul>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 5
+        </div>
+
+        <h3>
+          Não devemos limitar a ação de Deus
+        </h3>
+
+        <p>
+          Santa Teresa critica quem:
+        </p>
+
+        <ul>
+          <li>duvida das graças espirituais;</li>
+          <li>acha impossível uma profunda união com Deus;</li>
+          <li>escandaliza-se com experiências místicas.</li>
+        </ul>
+
+        <p>
+          Frase-chave:
+        </p>
+
+        <div class="quote">
+          “Deus não gosta que imponham limites a Suas obras.”
+        </div>
+
+        <p>
+          Ela afirma que Deus pode comunicar-se profundamente com qualquer alma.
+        </p>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 6
+        </div>
+
+        <h3>
+          Entrar no castelo significa entrar dentro de si
+        </h3>
+
+        <p>
+          Muitas pessoas:
+        </p>
+
+        <ul>
+          <li>vivem “ao redor” do castelo;</li>
+          <li>nunca entram em si mesmas;</li>
+          <li>vivem dispersas nas coisas exteriores.</li>
+        </ul>
+
+        <p>
+          Entrar no castelo significa:
+        </p>
+
+        <ul>
+          <li>voltar-se para o interior;</li>
+          <li>buscar Deus dentro da alma;</li>
+          <li>despertar espiritualmente.</li>
+        </ul>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 7
+        </div>
+
+        <h3>
+          A porta do castelo é a oração
+        </h3>
+
+        <p>
+          Este é um dos ensinamentos mais famosos do capítulo.
+        </p>
+
+        <p>
+          Frase central:
+        </p>
+
+        <div class="quote">
+          “A porta de entrada desse castelo é a oração e a reflexão.”
+        </div>
+
+        <p>
+          Ela explica que:
+        </p>
+
+        <ul>
+          <li>oração não é repetir palavras mecanicamente;</li>
+
+          <li>
+            exige consciência de:
+            com quem se fala;
+            quem fala;
+            o que se pede.
+          </li>
+        </ul>
+
+        <p>
+          Sem atenção interior,
+          não há verdadeira oração.
+        </p>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 8
+        </div>
+
+        <h3>
+          A alma sem oração fica paralisada
+        </h3>
+
+        <p>
+          Santa Teresa compara a alma sem oração a:
+        </p>
+
+        <ul>
+          <li>um corpo paralítico;</li>
+          <li>incapaz de mover-se espiritualmente.</li>
+        </ul>
+
+        <p>
+          Essas almas:
+        </p>
+
+        <ul>
+          <li>vivem presas ao exterior;</li>
+          <li>acostumam-se às distrações;</li>
+          <li>esquecem sua dignidade.</li>
+        </ul>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 9
+        </div>
+
+        <h3>
+          As primeiras moradas ainda são cheias de distrações
+        </h3>
+
+        <p>
+          As almas que começam a rezar:
+        </p>
+
+        <ul>
+          <li>ainda estão muito ligadas ao mundo;</li>
+          <li>entram no castelo com muitos “vermes” e distrações;</li>
+          <li>têm boa vontade, mas pouca firmeza.</li>
+        </ul>
+
+        <p>
+          Mesmo assim:
+          já é grande progresso começar a entrar dentro de si.
+        </p>
+
+      </section>
+
+      <div class="highlight">
+        A oração é a porta de entrada
+        para todo o caminho espiritual.
       </div>
 
-    </section>
+      <section class="phrases">
 
-    <section class="section">
+        <h4>
+          Principais frases resumidas
+        </h4>
 
-      <div class="section-number">3</div>
+        <p>“A alma é um castelo de diamante ou cristal.”</p>
 
-      <h2>O maior problema humano é não se conhecer</h2>
+        <p>“Nada se compara à beleza da alma.”</p>
 
-      <p>
-        Ela lamenta que:
-      </p>
+        <p>“Fomos criados à imagem e semelhança de Deus.”</p>
 
-      <ul>
-        <li>as pessoas cuidem apenas do corpo;</li>
-        <li>quase nunca pensem na alma;</li>
-        <li>ignorem quem habita dentro delas.</li>
-      </ul>
+        <p>“No centro da alma está a morada principal.”</p>
 
-      <p>
-        Imagem marcante:
-      </p>
+        <p>“A porta do castelo é a oração e a reflexão.”</p>
 
-      <p>
-        Admiramos “a muralha do castelo” (o corpo),
-        mas não entramos nos seus aposentos interiores.
-      </p>
+        <p>“As almas sem oração são como um corpo paralítico.”</p>
 
-      <p>
-        Para Santa Teresa,
-        isso é uma profunda ignorância espiritual.
-      </p>
+        <p>“Deus não gosta que imponham limites às Suas obras.”</p>
 
-    </section>
+        <p>“Poucas vezes pensamos nas riquezas que a alma encerra.”</p>
 
-    <section class="section">
+      </section>
 
-      <div class="section-number">4</div>
+      <section class="chapter" style="margin-top:120px;">
 
-      <h2>No centro da alma acontecem as coisas secretas entre Deus e a pessoa</h2>
+        <div class="chapter-label">
+          Mensagem Central
+        </div>
 
-      <p>
-        A morada principal:
-      </p>
+        <h3>
+          A alma humana possui
+          capacidade de união com Deus
+        </h3>
 
-      <ul>
-        <li>é o lugar da intimidade com Deus;</li>
-        <li>o espaço das maiores graças espirituais;</li>
-        <li>o coração da vida interior.</li>
-      </ul>
+        <p>
+          A alma humana possui:
+        </p>
 
-      <p>
-        Ela explica que Deus concede diferentes graças às almas:
-      </p>
+        <ul>
+          <li>beleza imensa;</li>
+          <li>profundidade espiritual;</li>
+          <li>capacidade de união com Deus.</li>
+        </ul>
 
-      <ul>
-        <li>não apenas por mérito;</li>
-        <li>mas para manifestar Sua grandeza e misericórdia.</li>
-      </ul>
+        <p>
+          Mas a maioria vive distraída nas coisas exteriores.
+        </p>
 
-    </section>
+        <p>
+          O caminho espiritual começa quando:
+        </p>
 
-    <section class="section">
+        <ul>
+          <li>a pessoa entra dentro de si mesma;</li>
+          <li>reconhece a presença de Deus no interior;</li>
+          <li>aprende a rezar verdadeiramente;</li>
+          <li>passa da superficialidade para a vida interior.</li>
+        </ul>
 
-      <div class="section-number">5</div>
+        <p>
+          Para Santa Teresa,
+          a oração é a porta de entrada
+          para todo o caminho espiritual.
+        </p>
 
-      <h2>Não devemos limitar a ação de Deus</h2>
-
-      <p>
-        Santa Teresa critica quem:
-      </p>
-
-      <ul>
-        <li>duvida das graças espirituais;</li>
-        <li>acha impossível uma profunda união com Deus;</li>
-        <li>escandaliza-se com experiências místicas.</li>
-      </ul>
-
-      <div class="quote">
-        “Deus não gosta que imponham limites às Suas obras.”
-      </div>
-
-      <p>
-        Ela afirma que Deus pode comunicar-se profundamente com qualquer alma.
-      </p>
-
-    </section>
-
-    <section class="section">
-
-      <div class="section-number">6</div>
-
-      <h2>Entrar no castelo significa entrar dentro de si</h2>
-
-      <p>
-        Muitas pessoas:
-      </p>
-
-      <ul>
-        <li>vivem “ao redor” do castelo;</li>
-        <li>nunca entram em si mesmas;</li>
-        <li>vivem dispersas nas coisas exteriores.</li>
-      </ul>
-
-      <p>
-        Entrar no castelo significa:
-      </p>
-
-      <ul>
-        <li>voltar-se para o interior;</li>
-        <li>buscar Deus dentro da alma;</li>
-        <li>despertar espiritualmente.</li>
-      </ul>
-
-    </section>
-
-    <section class="section">
-
-      <div class="section-number">7</div>
-
-      <h2>A porta do castelo é a oração</h2>
-
-      <p>
-        Este é um dos ensinamentos mais famosos do capítulo.
-      </p>
-
-      <div class="quote">
-        “A porta de entrada desse castelo é a oração e a reflexão.”
-      </div>
-
-      <p>
-        Ela explica que:
-      </p>
-
-      <ul>
-        <li>oração não é repetir palavras mecanicamente;</li>
-
-        <li>
-          exige consciência de:
-          com quem se fala;
-          quem fala;
-          o que se pede.
-        </li>
-      </ul>
-
-      <p>
-        Sem atenção interior,
-        não há verdadeira oração.
-      </p>
-
-    </section>
-
-    <section class="section">
-
-      <div class="section-number">8</div>
-
-      <h2>A alma sem oração fica paralisada</h2>
-
-      <p>
-        Santa Teresa compara a alma sem oração a:
-      </p>
-
-      <ul>
-        <li>um corpo paralítico;</li>
-        <li>incapaz de mover-se espiritualmente.</li>
-      </ul>
-
-      <p>
-        Essas almas:
-      </p>
-
-      <ul>
-        <li>vivem presas ao exterior;</li>
-        <li>acostumam-se às distrações;</li>
-        <li>esquecem sua dignidade.</li>
-      </ul>
-
-    </section>
-
-    <section class="section">
-
-      <div class="section-number">9</div>
-
-      <h2>As primeiras moradas ainda são cheias de distrações</h2>
-
-      <p>
-        As almas que começam a rezar:
-      </p>
-
-      <ul>
-        <li>ainda estão muito ligadas ao mundo;</li>
-        <li>entram no castelo com muitos “vermes” e distrações;</li>
-        <li>têm boa vontade, mas pouca firmeza.</li>
-      </ul>
-
-      <p>
-        Mesmo assim:
-        já é grande progresso começar a entrar dentro de si.
-      </p>
-
-    </section>
-
-    <div class="highlight">
-      A oração é a porta de entrada
-      para todo o caminho espiritual.
-    </div>
-
-    <section class="phrases">
-
-      <h3>Principais frases resumidas</h3>
-
-      <p>“A alma é um castelo de diamante ou cristal.”</p>
-
-      <p>“Nada se compara à beleza da alma.”</p>
-
-      <p>“Fomos criados à imagem e semelhança de Deus.”</p>
-
-      <p>“No centro da alma está a morada principal.”</p>
-
-      <p>“A porta do castelo é a oração e a reflexão.”</p>
-
-      <p>“As almas sem oração são como um corpo paralítico.”</p>
-
-      <p>“Deus não gosta que imponham limites às Suas obras.”</p>
-
-      <p>“Poucas vezes pensamos nas riquezas que a alma encerra.”</p>
-
-    </section>
-
-    <section class="section" style="margin-top:120px;">
-
-      <div class="section-number">Mensagem Central</div>
-
-      <h2>Mensagem central do capítulo</h2>
-
-      <p>
-        A alma humana possui:
-      </p>
-
-      <ul>
-        <li>beleza imensa;</li>
-        <li>profundidade espiritual;</li>
-        <li>capacidade de união com Deus.</li>
-      </ul>
-
-      <p>
-        Mas a maioria vive distraída nas coisas exteriores.
-      </p>
-
-      <p>
-        O caminho espiritual começa quando:
-      </p>
-
-      <ul>
-        <li>a pessoa entra dentro de si mesma;</li>
-        <li>reconhece a presença de Deus no interior;</li>
-        <li>aprende a rezar verdadeiramente;</li>
-        <li>passa da superficialidade para a vida interior.</li>
-      </ul>
-
-      <p>
-        Para Santa Teresa,
-        a oração é a porta de entrada para todo o caminho espiritual.
-      </p>
+      </section>
 
     </section>
 
@@ -563,13 +685,16 @@
 
   <footer class="footer">
 
-    <h3>Fim do Capítulo</h3>
+    <h4>
+      Castelo Interior
+    </h4>
 
     <p>
-      Castelo Interior — Primeiras Moradas
+      Santa Teresa de Ávila
     </p>
 
   </footer>
 
 </body>
+
 </html>
