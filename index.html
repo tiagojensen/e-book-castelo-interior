@@ -13,225 +13,246 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    :root{
-      --bg:#090b10;
-      --card:#141820;
-      --text:#f5f5f5;
-      --muted:#9da3af;
-      --accent:#d4b06a;
-      --line:rgba(255,255,255,0.08);
-      --max-width:760px;
+    :root {
+      --bg: #090b10;
+      --card: #141820;
+      --text: #f5f5f5;
+      --muted: #9da3af;
+      --accent: #d4b06a;
+      --line: rgba(255, 255, 255, 0.08);
+      --max-width: 760px;
     }
 
-    body{
-      background:var(--bg);
-      color:var(--text);
-      font-family:'Inter',sans-serif;
-      line-height:1.95;
-      -webkit-font-smoothing:antialiased;
-      overflow-x:hidden;
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.95;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    .hero{
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:80px 24px;
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 24px;
     }
 
-    .book-label{
-      color:var(--accent);
-      letter-spacing:6px;
-      text-transform:uppercase;
-      font-size:0.78rem;
-      margin-bottom:26px;
+    .book-label {
+      color: var(--accent);
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      margin-bottom: 26px;
     }
 
-    .hero h1{
-      font-family:'Cormorant Garamond',serif;
-      font-size:clamp(4rem,14vw,7rem);
-      line-height:0.92;
-      font-weight:600;
-      margin-bottom:34px;
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(4rem, 14vw, 7rem);
+      line-height: 0.92;
+      font-weight: 600;
+      margin-bottom: 34px;
     }
 
-    .divider{
-      width:90px;
-      height:1px;
-      background:var(--accent);
-      margin-bottom:34px;
+    .divider {
+      width: 90px;
+      height: 1px;
+      background: var(--accent);
+      margin-bottom: 34px;
     }
 
-    .hero p{
-      max-width:620px;
-      color:var(--muted);
-      font-size:1.12rem;
-      line-height:1.9;
+    .hero p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 1.12rem;
+      line-height: 1.9;
     }
 
-    .container{
-      width:100%;
-      max-width:var(--max-width);
-      margin:auto;
-      padding:0 24px 140px;
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 0 24px 140px;
     }
 
-    .morada{
-      margin-bottom:140px;
+    .morada {
+      margin-bottom: 140px;
     }
 
-    .morada-name{
-      color:var(--accent);
-      letter-spacing:5px;
-      text-transform:uppercase;
-      font-size:0.78rem;
-      margin-bottom:18px;
+    .morada-name {
+      color: var(--accent);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      margin-bottom: 18px;
     }
 
-    .morada h2{
-      font-family:'Cormorant Garamond',serif;
-      font-size:clamp(3rem,10vw,5rem);
-      line-height:0.95;
-      font-weight:600;
-      margin-bottom:70px;
+    .morada h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 10vw, 5rem);
+      line-height: 0.95;
+      font-weight: 600;
+      margin-bottom: 70px;
     }
 
-    .chapter{
-      margin-bottom:120px;
+    .chapter {
+      margin-bottom: 120px;
     }
 
-    .chapter-label{
-      color:var(--accent);
-      text-transform:uppercase;
-      letter-spacing:3px;
-      font-size:0.78rem;
-      margin-bottom:18px;
+    .chapter-label {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.78rem;
+      margin-bottom: 18px;
     }
 
-    .chapter h3{
-      font-family:'Cormorant Garamond',serif;
-      font-size:clamp(2.3rem,7vw,3.8rem);
-      line-height:1.02;
-      font-weight:600;
-      margin-bottom:38px;
-      max-width:560px;
+    .chapter h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.3rem, 7vw, 3.8rem);
+      line-height: 1.02;
+      font-weight: 600;
+      margin-bottom: 38px;
+      max-width: 560px;
     }
 
-    p{
-      font-size:1.14rem;
-      color:#ededed;
-      margin-bottom:30px;
+    p {
+      font-size: 1.14rem;
+      color: #ededed;
+      margin-bottom: 30px;
     }
 
-    ul{
-      padding-left:24px;
-      margin-bottom:34px;
+    ul {
+      padding-left: 24px;
+      margin-bottom: 34px;
     }
 
-    li{
-      margin-bottom:18px;
-      color:#ececec;
-      font-size:1.08rem;
+    li {
+      margin-bottom: 18px;
+      color: #ececec;
+      font-size: 1.08rem;
     }
 
-    .quote{
-      border-left:2px solid var(--accent);
-      padding-left:24px;
-      margin:55px 0;
-      font-style:italic;
-      color:#dddddd;
-      font-size:1.1rem;
+    .quote {
+      border-left: 2px solid var(--accent);
+      padding-left: 24px;
+      margin: 55px 0;
+      font-style: italic;
+      color: #dddddd;
+      font-size: 1.1rem;
     }
 
-    .highlight{
-      font-family:'Cormorant Garamond',serif;
-      color:var(--accent);
-      text-align:center;
-      font-size:clamp(2rem,6vw,3rem);
-      line-height:1.45;
-      margin:110px 0;
-      padding:0 12px;
+    .highlight {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--accent);
+      text-align: center;
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.45;
+      margin: 110px 0;
+      padding: 0 12px;
     }
 
-    .phrases{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:32px;
-      padding:42px 34px;
-      margin-top:50px;
+    .phrases {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      padding: 42px 34px;
+      margin-top: 50px;
     }
 
-    .phrases h4{
-      font-family:'Cormorant Garamond',serif;
-      font-size:2.2rem;
-      margin-bottom:30px;
-      font-weight:600;
+    .phrases h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      font-weight: 600;
     }
 
-    .phrases p{
-      margin-bottom:18px;
-      color:#f0f0f0;
+    .phrases p {
+      margin-bottom: 18px;
+      color: #f0f0f0;
     }
 
-    .footer{
-      border-top:1px solid var(--line);
-      padding:80px 24px;
-      text-align:center;
-      color:var(--muted);
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 80px 24px;
+      text-align: center;
+      color: var(--muted);
     }
 
-    .footer h4{
-      font-family:'Cormorant Garamond',serif;
-      font-size:2rem;
-      margin-bottom:18px;
-      color:var(--text);
+    .footer h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      margin-bottom: 18px;
+      color: var(--text);
     }
 
-    @media(max-width:768px){
+    .image-block {
+      margin: 90px 0;
+      text-align: center;
+    }
 
-      .container{
-        padding:0 22px 110px;
+    .image-block img {
+      width: 100%;
+      display: block;
+      border-radius: 28px;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    .image-caption {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    @media(max-width:768px) {
+
+      .container {
+        padding: 0 22px 110px;
       }
 
-      .hero{
-        min-height:90vh;
+      .hero {
+        min-height: 90vh;
       }
 
-      .hero h1{
-        line-height:0.96;
+      .hero h1 {
+        line-height: 0.96;
       }
 
-      .morada{
-        margin-bottom:110px;
+      .morada {
+        margin-bottom: 110px;
       }
 
-      .chapter{
-        margin-bottom:90px;
+      .chapter {
+        margin-bottom: 90px;
       }
 
-      p{
-        font-size:1.08rem;
+      p {
+        font-size: 1.08rem;
       }
 
-      li{
-        font-size:1.02rem;
+      li {
+        font-size: 1.02rem;
       }
 
     }
-
   </style>
 
 </head>
@@ -319,6 +340,16 @@
           “Consideremos nossa alma como um castelo,
           feito de um só diamante ou de um cristal claríssimo.”
         </div>
+
+        <section class="image-block">
+
+          <img src="castelo-brilhante.png" alt="Castelo Interior">
+
+          <p class="image-caption">
+            O castelo interior simboliza a alma habitada por Deus.
+          </p>
+
+        </section>
 
         <p>
           A imagem mostra:
@@ -675,6 +706,332 @@
           Para Santa Teresa,
           a oração é a porta de entrada
           para todo o caminho espiritual.
+        </p>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Capítulo 2
+        </div>
+
+        <h3>
+          A alma obscurecida pelo pecado
+        </h3>
+
+        <p>
+          Este capítulo descreve o estado da alma quando está em pecado mortal
+          e destaca a importância do autoconhecimento,
+          da humildade
+          e da vigilância espiritual.
+        </p>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 1
+        </div>
+
+        <h3>
+          A alma em pecado mortal perde sua luz
+        </h3>
+
+        <p>
+          Santa Teresa compara a alma a um castelo iluminado por Deus.
+          Quando cai em pecado mortal:
+        </p>
+
+        <ul>
+          <li>a alma permanece capaz de receber Deus, mas fica obscurecida;</li>
+          <li>suas obras deixam de produzir frutos espirituais;</li>
+          <li>ela se afasta da fonte da vida e passa a produzir “desventura e imundície”.</li>
+        </ul>
+
+        <p>
+          Frase central:
+        </p>
+
+        <div class="quote">
+          “Não há trevas mais medonhas,
+          nada tão escuro e negro.”
+        </div>
+
+        <p>
+          Ela insiste que o pecado mortal é o maior mal possível,
+          porque separa a alma de Deus.
+        </p>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 2
+        </div>
+
+        <h3>
+          Deus continua presente no centro da alma
+        </h3>
+
+        <p>
+          Mesmo no pecado,
+          Deus não desaparece da alma:
+        </p>
+
+        <ul>
+          <li>o “Sol” continua brilhando no centro;</li>
+          <li>o problema está na alma, que se cobre de escuridão.</li>
+        </ul>
+
+        <p>
+          Imagem importante:
+        </p>
+
+        <section class="image-block">
+
+          <img src="castelo-escuro.png" alt="Castelo Interior">
+
+          <p class="image-caption">
+            Castelo interior de uma alma em estado de pecado mortal.
+          </p>
+
+        </section>
+
+        <div class="quote">
+          “Se se põe um pano negro sobre um cristal,
+          certamente a luz não produzirá o mesmo efeito.”
+        </div>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 3
+        </div>
+
+        <h3>
+          Necessidade do autoconhecimento
+        </h3>
+
+        <p>
+          Um dos temas mais importantes do capítulo é:
+        </p>
+
+        <ul>
+          <li>conhecer a si mesmo é essencial para crescer espiritualmente;</li>
+          <li>esse conhecimento deve acontecer à luz de Deus, e não apenas olhando para os próprios defeitos.</li>
+        </ul>
+
+        <p>
+          Frase-chave:
+        </p>
+
+        <div class="quote">
+          “Jamais nos conheceremos realmente sem antes conhecer a Deus.”
+        </div>
+
+        <p>
+          Ela explica que:
+        </p>
+
+        <ul>
+          <li>contemplar a grandeza de Deus revela nossa pequenez;</li>
+          <li>contemplar Sua pureza mostra nossa impureza;</li>
+          <li>contemplar Sua humildade revela nossa falta de humildade.</li>
+        </ul>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 4
+        </div>
+
+        <h3>
+          Humildade verdadeira não é viver preso à culpa
+        </h3>
+
+        <p>
+          Santa Teresa alerta contra uma falsa humildade que:
+        </p>
+
+        <ul>
+          <li>paralisa;</li>
+          <li>gera medo;</li>
+          <li>impede a oração e o progresso espiritual.</li>
+        </ul>
+
+        <p>
+          Ela mostra como o demônio usa pensamentos aparentemente humildes:
+        </p>
+
+        <ul>
+          <li>“não sou digna”;</li>
+          <li>“oração não é para mim”;</li>
+          <li>“isso é presunção”.</li>
+        </ul>
+
+        <p>
+          Esses pensamentos acabam afastando a pessoa de Deus.
+        </p>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 5
+        </div>
+
+        <h3>
+          A alma possui grande dignidade
+        </h3>
+
+        <p>
+          A alma é vasta,
+          rica
+          e cheia de moradas interiores.
+        </p>
+
+        <p>
+          Ela aconselha:
+        </p>
+
+        <ul>
+          <li>não limitar a alma;</li>
+          <li>permitir que ela avance;</li>
+          <li>não permanecer presa apenas ao exame dos próprios defeitos.</li>
+        </ul>
+
+        <p>
+          Imagem marcante:
+        </p>
+
+        <div class="quote">
+          O castelo é comparado a um palmito
+          com muitas camadas em torno do centro
+          onde está o Rei.
+        </div>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 6
+        </div>
+
+        <h3>
+          O demônio age de maneira sutil
+        </h3>
+
+        <p>
+          Grande parte do capítulo fala da ação enganadora do demônio:
+        </p>
+
+        <ul>
+          <li>ele usa até coisas boas para desviar a alma;</li>
+          <li>exageros de penitência ou zelo podem destruir a caridade;</li>
+          <li>críticas e vigilância excessiva sobre os outros causam divisão.</li>
+        </ul>
+
+        <p>
+          Ensinamento principal:
+        </p>
+
+        <div class="quote">
+          “A perfeição verdadeira é amar a Deus e ao próximo.”
+        </div>
+
+      </section>
+
+      <section class="chapter">
+
+        <div class="chapter-label">
+          Parte 7
+        </div>
+
+        <h3>
+          A caridade é mais importante que rigorismos
+        </h3>
+
+        <p>
+          Santa Teresa insiste:
+        </p>
+
+        <ul>
+          <li>cada irmã deve olhar mais para si mesma do que para os defeitos das outras;</li>
+          <li>murmuração e julgamento destroem a paz;</li>
+          <li>o amor fraterno é o verdadeiro caminho de perfeição.</li>
+        </ul>
+
+      </section>
+
+      <div class="highlight">
+        A perfeição verdadeira
+        é amar a Deus e ao próximo.
+      </div>
+
+      <section class="phrases">
+
+        <h4>
+          Principais frases resumidas
+        </h4>
+
+        <p>“Não há trevas mais medonhas do que a alma em pecado mortal.”</p>
+
+        <p>“O Sol que resplandece no centro da alma nunca perde o brilho.”</p>
+
+        <p>“Jamais nos conheceremos realmente sem antes conhecer a Deus.”</p>
+
+        <p>“A humildade sempre fabrica o seu mel, como a abelha na colmeia.”</p>
+
+        <p>“A perfeição verdadeira é amar a Deus e ao próximo.”</p>
+
+        <p>“Quanto mais nos empenharmos nesses dois mandamentos, mais perfeitas seremos.”</p>
+
+        <p>“O demônio se transfigura em anjo de luz.”</p>
+
+        <p>“Fixemos os olhos em Cristo, nosso bem.”</p>
+
+      </section>
+
+      <section class="chapter" style="margin-top:120px;">
+
+        <div class="chapter-label">
+          Mensagem Central
+        </div>
+
+        <h3>
+          O caminho espiritual nasce
+          da humildade e da caridade
+        </h3>
+
+        <p>
+          O verdadeiro caminho espiritual começa quando:
+        </p>
+
+        <ul>
+          <li>a alma reconhece sua miséria;</li>
+          <li>conhece a Deus;</li>
+          <li>aprende a humildade;</li>
+          <li>evita o pecado;</li>
+          <li>cresce no amor ao próximo;</li>
+          <li>permanece vigilante contra ilusões espirituais.</li>
+        </ul>
+
+        <p>
+          Para Santa Teresa,
+          a vida interior não consiste em perfeccionismo ou medo,
+          mas em caminhar para Deus
+          com humildade,
+          autoconhecimento
+          e caridade.
         </p>
 
       </section>
