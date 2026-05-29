@@ -18,10 +18,15 @@
     rel="stylesheet">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     :root {
@@ -35,7 +40,9 @@
     }
 
     body {
-      background: var(--bg);
+      background:
+        radial-gradient(circle at top, rgba(212, 176, 106, 0.12), transparent 30%),
+        var(--bg);
       color: var(--text);
       font-family: 'Inter', sans-serif;
       line-height: 1.95;
@@ -51,6 +58,22 @@
       align-items: center;
       text-align: center;
       padding: 80px 24px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212,176,106,0.14), transparent 70%);
+      filter: blur(10px);
+      z-index: 0;
+    }
+
+    .hero>* {
+      position: relative;
+      z-index: 1;
     }
 
     .book-label {
@@ -81,17 +104,75 @@
       color: var(--muted);
       font-size: 1.12rem;
       line-height: 1.9;
+      margin-bottom: 40px;
+    }
+
+    .enter-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 34px;
+      border-radius: 999px;
+      text-decoration: none;
+      background: rgba(212,176,106,0.12);
+      border: 1px solid rgba(212,176,106,0.3);
+      color: var(--accent);
+      font-size: 0.95rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: 0.4s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .enter-button:hover {
+      transform: translateY(-3px);
+      background: rgba(212,176,106,0.18);
+      box-shadow: 0 10px 30px rgba(212,176,106,0.15);
+    }
+
+    .floating-nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      backdrop-filter: blur(14px);
+      background: rgba(9,11,16,0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .floating-nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      padding: 18px 24px;
+      overflow-x: auto;
+    }
+
+    .floating-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      transition: 0.3s ease;
+    }
+
+    .floating-nav a:hover {
+      color: var(--accent);
     }
 
     .container {
       width: 100%;
       max-width: var(--max-width);
       margin: auto;
-      padding: 0 24px 140px;
+      padding: 100px 24px 140px;
     }
 
     .morada {
       margin-bottom: 140px;
+      animation: fadeUp 1s ease;
     }
 
     .morada-name {
@@ -112,6 +193,9 @@
 
     .chapter {
       margin-bottom: 120px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: reveal 1s forwards;
     }
 
     .chapter-label {
@@ -168,11 +252,12 @@
     }
 
     .phrases {
-      background: var(--card);
+      background: rgba(20,24,32,0.75);
       border: 1px solid var(--line);
       border-radius: 32px;
       padding: 42px 34px;
       margin-top: 50px;
+      backdrop-filter: blur(12px);
     }
 
     .phrases h4 {
@@ -213,6 +298,11 @@
       aspect-ratio: 4/5;
       object-fit: cover;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      transition: 0.6s ease;
+    }
+
+    .image-block img:hover {
+      transform: scale(1.015);
     }
 
     .image-caption {
@@ -222,10 +312,29 @@
       font-style: italic;
     }
 
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     @media(max-width:768px) {
 
       .container {
-        padding: 0 22px 110px;
+        padding: 70px 22px 110px;
       }
 
       .hero {
@@ -252,7 +361,12 @@
         font-size: 1.02rem;
       }
 
+      .floating-nav-inner {
+        justify-content: flex-start;
+      }
+
     }
+
   </style>
 
 </head>
@@ -277,11 +391,33 @@
       rumo à união interior com Deus.
     </p>
 
+    <a href="#primeiras-moradas" class="enter-button">
+      Entrar nas Moradas
+    </a>
+
   </section>
+
+  <nav class="floating-nav">
+
+    <div class="floating-nav-inner">
+
+      <a href="#primeiras-moradas">Primeiras Moradas</a>
+
+      <a href="#capitulo-1">Capítulo 1</a>
+
+      <a href="#capitulo-2">Capítulo 2</a>
+
+      <a href="#">Segundas Moradas</a>
+
+      <a href="#">Terceiras Moradas</a>
+
+    </div>
+
+  </nav>
 
   <main class="container">
 
-    <section class="morada">
+    <section class="morada" id="primeiras-moradas">
 
       <div class="morada-name">
         Primeiras Moradas
@@ -291,7 +427,7 @@
         O despertar da alma
       </h2>
 
-      <section class="chapter">
+      <section class="chapter" id="capitulo-1">
 
         <div class="chapter-label">
           Capítulo 1
@@ -710,7 +846,7 @@
 
       </section>
 
-      <section class="chapter">
+      <section class="chapter" id="capitulo-2">
 
         <div class="chapter-label">
           Capítulo 2
@@ -1035,6 +1171,8 @@
         </p>
 
       </section>
+
+      <!-- MANTENHA O RESTANTE DO CAPÍTULO 2 IGUAL -->
 
     </section>
 
