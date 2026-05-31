@@ -140,7 +140,18 @@
           Capítulo 2
         </div>
 
-        <!-- Conteúdo -->
+        <h3>
+          A alma obscurecida pelo pecado
+        </h3>
+
+        <p>
+          Este capítulo descreve o estado da alma quando está em pecado mortal
+          e destaca a importância do autoconhecimento,
+          da humildade
+          e da vigilância espiritual.
+        </p>
+
+        <div id="capitulo2-conteudo"></div>
 
       </section>
 
@@ -328,11 +339,20 @@
   <script src="EBOOK.js"></script>
 
   <script>
+
     fetch('pm-cap1.html')
       .then(response => response.text())
       .then(html => {
         document.getElementById('capitulo1-conteudo').innerHTML = html;
       });
+
+    fetch('pm-cap2.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('capitulo2-conteudo').innerHTML = html;
+      });
+
+    
   </script>
 
 </body>
