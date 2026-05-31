@@ -260,16 +260,130 @@
     <main class="container">
 
       <div class="morada-header">
-        <div class="morada-name">Terceiras Moradas</div>
+        <div class="morada-name">A fidelidade provada na aridez e na humildade</div>
         <h2>Terceiras Moradas</h2>
       </div>
 
       <section class="chapter" id="terceiras-cap1">
-        <div class="chapter-label">Capítulo 1</div>
+
+        <div class="chapter-label">
+          Capítulo 1
+        </div>
+
+        <h3>
+          A alma virtuosa ainda
+          precisa abandonar a autoconfiança
+        </h3>
+
+        <p>
+          Neste capítulo,
+          Santa Teresa fala das almas
+          já bastante adiantadas na vida espiritual:
+        </p>
+
+        <ul>
+          <li>disciplinadas;</li>
+          <li>moralmente corretas;</li>
+          <li>dedicadas à oração;</li>
+          <li>afastadas do pecado grave;</li>
+          <li>firmes na prática das virtudes.</li>
+        </ul>
+
+        <p>
+          Contudo,
+          ela alerta que,
+          mesmo nesse estágio,
+          ainda não existe segurança completa.
+        </p>
+
+        <p>
+          O grande ensinamento deste capítulo
+          é a necessidade de:
+        </p>
+
+        <ul>
+          <li>humildade;</li>
+          <li>temor de Deus;</li>
+          <li>desapego até das consolações espirituais;</li>
+          <li>abandono total à vontade divina.</li>
+        </ul>
+
+        <p>
+          As almas das terceiras moradas:
+        </p>
+
+        <ul>
+          <li>já venceram muitos combates;</li>
+          <li>vivem com ordem e virtude;</li>
+          <li>praticam oração e penitência;</li>
+          <li>desejam agradar a Deus.</li>
+        </ul>
+
+        <p>
+          Mas:
+        </p>
+
+        <ul>
+          <li>ainda podem cair;</li>
+          <li>ainda possuem apego oculto a si mesmas;</li>
+          <li>ainda não se entregaram totalmente à vontade de Deus.</li>
+        </ul>
+
+        <div id="conteudo-tm-capitulo1"></div>
+
       </section>
 
       <section class="chapter" id="terceiras-cap2">
-        <div class="chapter-label">Capítulo 2</div>
+
+        <div class="chapter-label">
+          Capítulo 2
+        </div>
+
+        <h3>
+          As provações revelam
+          a verdade do coração
+        </h3>
+
+        <p>
+          Neste capítulo,
+          Santa Teresa continua descrevendo
+          as almas das terceiras moradas
+          e aprofunda um tema essencial:
+          as securas espirituais
+          e as provações interiores.
+        </p>
+
+        <p>
+          Ela mostra que muitas almas:
+        </p>
+
+        <ul>
+          <li>já vivem corretamente;</li>
+          <li>têm oração;</li>
+          <li>praticam virtudes;</li>
+          <li>evitam pecados graves;</li>
+        </ul>
+
+        <p>
+          mas ainda:
+        </p>
+
+        <ul>
+          <li>se perturbam facilmente;</li>
+          <li>não suportam bem perdas e humilhações;</li>
+          <li>continuam muito centradas em si mesmas.</li>
+        </ul>
+
+        <p>
+          Por isso,
+          Deus permite provas interiores
+          para revelar imperfeições ocultas
+          e conduzir a alma
+          a uma humildade mais profunda.
+        </p>
+
+        <div id="conteudo-tm-capitulo2"></div>
+
       </section>
 
     </main>
@@ -406,7 +520,19 @@
         document.getElementById('conteudo-sm-capitulo1').innerHTML = html;
       });
 
-    
+    fetch('tm-cap1.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('conteudo-tm-capitulo1').innerHTML = html;
+      });
+
+    fetch('tm-cap2.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('conteudo-tm-capitulo2').innerHTML = html;
+      });
+
+
   </script>
 
 </body>
