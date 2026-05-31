@@ -130,7 +130,7 @@
           e o perigo de viver sem entrar dentro de si mesma.
         </p>
 
-        <div id="capitulo1-conteudo"></div>
+        <div id="conteudo-pm-capitulo1"></div>
 
       </section>
 
@@ -151,7 +151,7 @@
           e da vigilância espiritual.
         </p>
 
-        <div id="capitulo2-conteudo"></div>
+        <div id="conteudo-pm-capitulo2"></div>
 
       </section>
 
@@ -176,7 +176,7 @@
     <main class="container">
 
       <div class="morada-header">
-        <div class="morada-name">Segundas Moradas</div>
+        <div class="morada-name">A batalha da perseverança</div>
         <h2>Segundas Moradas</h2>
       </div>
 
@@ -186,7 +186,55 @@
           Capítulo 1
         </div>
 
-        <!-- Conteúdo -->
+        <h3>
+          A alma começa a lutar seriamente
+          para permanecer com Deus
+        </h3>
+
+        <p>
+          Neste capítulo,
+          Santa Teresa descreve a situação das almas
+          que já começaram a rezar
+          e perceberam que precisam mudar de vida,
+          mas ainda lutam fortemente contra:
+        </p>
+
+        <ul>
+          <li>os apegos;</li>
+          <li>as distrações;</li>
+          <li>as tentações do mundo;</li>
+          <li>as oscilações interiores.</li>
+        </ul>
+
+        <p>
+          O tema principal das segundas moradas
+          é a perseverança.
+        </p>
+
+        <p>
+          Essas almas:
+        </p>
+
+        <ul>
+          <li>já ouviram o chamado de Deus;</li>
+          <li>começaram a oração;</li>
+          <li>querem avançar espiritualmente;</li>
+          <li>mas ainda vivem em conflito interior.</li>
+        </ul>
+
+        <p>
+          É uma fase marcada por:
+        </p>
+
+        <ul>
+          <li>batalha espiritual;</li>
+          <li>quedas;</li>
+          <li>recomeços;</li>
+          <li>crescimento lento;</li>
+          <li>combate constante.</li>
+        </ul>
+
+        <div id="conteudo-sm-capitulo1"></div>
 
       </section>
 
@@ -343,13 +391,19 @@
     fetch('pm-cap1.html')
       .then(response => response.text())
       .then(html => {
-        document.getElementById('capitulo1-conteudo').innerHTML = html;
+        document.getElementById('conteudo-pm-capitulo1').innerHTML = html;
       });
 
     fetch('pm-cap2.html')
       .then(response => response.text())
       .then(html => {
-        document.getElementById('capitulo2-conteudo').innerHTML = html;
+        document.getElementById('conteudo-pm-capitulo2').innerHTML = html;
+      });
+
+    fetch('sm-cap1.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('conteudo-sm-capitulo1').innerHTML = html;
       });
 
     
