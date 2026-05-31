@@ -11,7 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="EBOOK.css">
 
@@ -105,7 +107,7 @@
     <main class="container">
 
       <div class="morada-header">
-        <div class="morada-name">Primeiras Moradas</div>
+        <div class="morada-name">O despertar da alma</div>
         <h2>Primeiras Moradas</h2>
       </div>
 
@@ -115,7 +117,20 @@
           Capítulo 1
         </div>
 
-        <!-- Conteúdo -->
+        <h3>
+          O Castelo Interior da Alma
+        </h3>
+
+        <p>
+          Neste capítulo, Santa Teresa apresenta a imagem central de todo o livro:
+          a alma humana como um castelo interior cheio de moradas,
+          no centro do qual habita Deus.
+          Ela explica a dignidade da alma,
+          a importância da oração
+          e o perigo de viver sem entrar dentro de si mesma.
+        </p>
+
+        <div id="capitulo1-conteudo"></div>
 
       </section>
 
@@ -311,6 +326,14 @@
   </footer>
 
   <script src="EBOOK.js"></script>
+
+  <script>
+    fetch('pm-cap1.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('capitulo1-conteudo').innerHTML = html;
+      });
+  </script>
 
 </body>
 
